@@ -7,9 +7,9 @@
 
 ### Popis problému
 
-- Aplikace bude sbírat data ze stránky "sreality.cz" a následně si je uloží s datem sběru do souboru. 
-- Později bude možné tento soubor zobrazit a porovnat stejné data s odlišnými daty sběru.
-- Například zobrazí procentní nárust nebo pokles průměrné ceny.
+- Aplikace bude podle kritérií sbírat data ze stránky "sreality.cz", zprůměruje ceny a uloží je do souboru.
+- Později bude možné tento soubor zobrazit a porovnat stejné data ovšem z jiného dne.
+- Zobrazí procentní nárust nebo pokles průměrné ceny.
 
 ## Řešení
 
@@ -20,10 +20,10 @@
 | Data |                   |
 | ------------- | ------------------------------ |
 | Získat data z sreality.cz      | 0%      |
-| Zdokumentovat získání specifických dat (reality, lokality) z sreality.cz      | 0%      |
-| Uložit data do JSON souboru      | 0%      |
-| Získat data z JSON souboru      | 0%      |
-| Získat specifické data      | 0%      |
+| Zdokumentovat získání specifických dat (typ reality a lokality) z sreality.cz      | 0%      |
+| Získat JSON data     | 0%      |
+| Zpracovat data z JSON souboru     | 0%      |
+| Uložit data do souboru     | 0%      |
 
 | Uživatelské rozhraní |                   |
 | ------------- | ------------------------------ |
@@ -46,6 +46,7 @@ flowchart TD
 
     %% Úvodní stránka
     A[Úvodní stránka] --> newData(Vybrat nové data)
+    A --> konec(Konec Aplikace)
     
     newData --> lokalita(Výběr kraje)
 
@@ -76,8 +77,6 @@ flowchart TD
 
 ### Class diagram
 - Diagram tříd
-- Vygenerovat
-- FlowChart?
 
 ## Testování
 
