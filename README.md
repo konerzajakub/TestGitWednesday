@@ -1,4 +1,3 @@
-# TestGitWednesday
 # Monitorování cen nemovitostí
 - Semestrální práce 04/2023
 
