@@ -36,7 +36,7 @@
 - Seznam funkcí z pohledu uživatele, které bude Váš program poskytovat např. formou větveného seznamu (stromu)
 - Může sloužit následně jako podklad pro menu. Funkce očíslujte.
 
-```
+```mermaid
 flowchart TD
     %% A = Úvodní stránka
     %% B = Výběr nových dat
