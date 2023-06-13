@@ -192,63 +192,61 @@ per_page
 ```mermaid
 classDiagram
     class app {
-        + AverageValueFromArrayList()
-        + getPostRequestInString()
-        + getNumberOfEstates()
+        + AverageValueFromArrayList(): float
+        + getPostRequestInString(): string
+        + getNumberOfEstates(): int
 
-        + jsonToClass(jsonString)
-        + getCurrentDateTime()
-        + formatDateTime(dateTime)
-        + getUsersPath()
+        + jsonToClass(jsonString: string): Estate
+        + getCurrentDateTime(): DateTime
+        + formatDateTime(dateTime: DateTime): string
+        + getUsersPath(): string
     }
 
     class uiFormatter{
-        + printStringArrayInBox(lines)
-        + printBorder(length)
-        + printLine(line, maxLength)
-        
+        + printStringArrayInBox(lines: string[]): void
+        + printBorder(length: int): void
+        + printLine(line: string, maxLength: int): void
     }
 
     class ui {
-        - UsersPath
-        - sc
-        + start()
-        + mainMenuUI()
-        + newDataUI()
-        + showDataUI()
-        + compareDataUI()
-        + typeChose()
-        + localityChose()
+        - UsersPath: string
+        - sc: Scanner
+        + start(): void
+        + mainMenuUI(): void
+        + newDataUI(): void
+        + showDataUI(): void
+        + compareDataUI(): void
+        + typeChose(): int
+        + localityChose(): int
     }
 
     class dataManager {
-        + saveFile(fileName, fileContent)
-        + appendFile(fileName, fileContent)
-        + readFileText(fileLocation)
-        + processFileData(filePath)
+        + saveFile(fileName: string, fileContent: string): boolean
+        + appendFile(fileName: string, fileContent: string): boolean
+        + readFileText(fileLocation: string): string
+        + processFileData(filePath: string): boolean
     }
 
-
     class Estate {
-        - name
-        - price
-        - area
-        - locality_region_id
-        - category_main_cb
-        - category_type_cb
-        - locality_district_id
-        + Estate()
-        + getName()
-        + getPrice()
-        + getArea()
-        + setPrice()
-        + getPricePerMeter()
+        - name: string
+        - price: int
+        - area: int
+        - locality_region_id: int
+        - category_main_cb: int
+        - category_type_cb: int
+        - locality_district_id: int
+        + Estate(): void
+        + getName(): int
+        + getPrice(): int
+        + getArea(): float
+        + setPrice(price: float): void
+        + getPricePerMeter(): float
     }
 
     ui -- app
     ui -- uiFormatter
     app -- dataManager
-    app -- Estate
+    ui -- Estate
 
 ```
 
