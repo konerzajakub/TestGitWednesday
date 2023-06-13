@@ -2,12 +2,12 @@
 - Semestrální práce 04/2023
 
 ### Motivace
-- Téma jsem si vybral, protože mi přišly ceny realit zajímavé a zároveň jsem si chtěl vyzkoušet parsování reálných JSON dat z webových zdrojů.
+- Téma statistiky cen realit jsem si vybral, protože mi přišly ceny realit zajímavé a zároveň jsem si chtěl vyzkoušet parsování reálných JSON dat z webových zdrojů.
 
 ### Popis problému
 
-- Aplikace bude podle kritérií sbírat data ze stránky "sreality.cz", zprůměruje ceny a uloží je do souboru.
-- Později bude možné tento soubor zobrazit a porovnat stejné data ovšem z jiného dne.
+- Aplikace podle kritérií sesbírá data ze stránky "sreality.cz", zprůměruje ceny a uloží je do souboru.
+- Umí tento soubor zobrazit a porovnat stejné data v průběhu času.
 - Zobrazí procentní nárust nebo pokles průměrné ceny.
 
 ## Řešení
@@ -32,8 +32,6 @@
 | Porovnání stejných nových a starých dat     | 100%      |
 
 ### Funkční specifikace
-- Seznam funkcí z pohledu uživatele, které bude Váš program poskytovat např. formou větveného seznamu (stromu)
-- Může sloužit následně jako podklad pro menu. Funkce očíslujte.
 
 ```mermaid
 flowchart TD
@@ -75,8 +73,37 @@ flowchart TD
 - Jaké datové typy budou obsahovat, čím budou odděleny jednotlivé údaje, jestli je požadovaný určitý formát názvů souborů a pod.
 
 ### Class diagram
-- Diagram tříd
+```mermaid
+flowchart TD
+    %% A = Úvodní stránka
+    %% B = Výběr nových dat
+    %% D = Volba mezi existujícími daty
+    %% E = Získání dat z sreality.cz
+    %% F = Zobrazení dat
 
-## Testování
+    %% Úvodní stránka
+    A[appRunner] --> UI(UI)
+    UI --> |getPostRequestInString| app(app)
+    UI --> |getNumberOfEstates| app(app)
+    UI --> |getEstatePrices| app(app)
 
-## Zdrojový kód
+    %%UI --> |getEstatePrices| app(app)
+    %%UI --> |getEstatePrices| app(app)
+    %%UI --> |getEstatePrices| app(app)
+    %%UI --> |getEstatePrices| app(app)
+    %%UI --> |getEstatePrices| app(app)
+    
+    
+    
+    %%UI --> konec(Výběr kraje)
+
+    
+    %% Výběr nových dat
+
+    
+
+    %% Go back
+    %%B --> A 
+    %%D --> A 
+    %%F --> D 
+```
