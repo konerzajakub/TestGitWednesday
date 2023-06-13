@@ -14,22 +14,22 @@
 
 | Dokumentace |                   |
 | ------------- | ------------------------------ |
-| Vytvořit readme.md      | 30%      |
+| Vytvořit readme.md      | 90%      |
 
 | Data |                   |
 | ------------- | ------------------------------ |
-| Získat data z sreality.cz      | 0%      |
-| Zdokumentovat získání specifických dat (typ reality a lokality) z sreality.cz      | 0%      |
-| Získat JSON data     | 0%      |
-| Zpracovat data z JSON souboru     | 0%      |
-| Uložit data do souboru     | 0%      |
+| Získat data z sreality.cz      | 100%      |
+| Zdokumentovat získání specifických dat (typ reality a lokality) z sreality.cz      | 100%      |
+| Získat JSON data     | 100%      |
+| Zpracovat data z JSON souboru     | 100%      |
+| Uložit data do souboru     | 100%      |
 
 | Uživatelské rozhraní |                   |
 | ------------- | ------------------------------ |
-| Úvodní stránka     | 0%      |
-| Tvorba nových dat     | 0%      |
-| Prohlížení dat     | 0%      |
-| Porovnání stejných nových a starých dat     | 0%      |
+| Úvodní stránka     | 100%      |
+| Tvorba nových dat     | 100%      |
+| Prohlížení dat     | 100%      |
+| Porovnání stejných nových a starých dat     | 100%      |
 
 ### Funkční specifikace
 - Seznam funkcí z pohledu uživatele, které bude Váš program poskytovat např. formou větveného seznamu (stromu)
