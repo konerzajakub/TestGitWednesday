@@ -65,7 +65,7 @@ flowchart TD
 ```
 
 ### Popis struktury vstupních a výstupních souborů
-- Soubory realit jsou pojmenovány podle typu nemovitosti. (v závislosti na API sreality
+- Soubory realit jsou pojmenovány podle typu nemovitosti. (v závislosti na API sreality)
 
 Zde jsou čísla API reprezentující typy a co znamenají:
 
