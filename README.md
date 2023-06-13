@@ -52,8 +52,7 @@ flowchart TD
     %% Výběr nových dat
     typ --> |Získání dat z sreality.cz| E(Data uložena)
     E --> A
-    D --> |Chci vidět jeden soubor| F
-    D --> |Chci porovnat dva soubory| F(Prezentace dat)
+    D --> |Výběr souboru| F(Prezentace dat)
 
     F --> A
 
