@@ -190,36 +190,66 @@ per_page
 
 ### Class diagram
 ```mermaid
-flowchart TD
-    %% A = Úvodní stránka
-    %% B = Výběr nových dat
-    %% D = Volba mezi existujícími daty
-    %% E = Získání dat z sreality.cz
-    %% F = Zobrazení dat
+classDiagram
+    class app {
+        + AverageValueFromArrayList()
+        + getPostRequestInString()
+        + getNumberOfEstates()
 
-    %% Úvodní stránka
-    A[appRunner] --> UI(UI)
-    UI --> |getPostRequestInString| app(app)
-    UI --> |getNumberOfEstates| app(app)
-    UI --> |getEstatePrices| app(app)
+        + jsonToClass(jsonString)
+        + getCurrentDateTime()
+        + formatDateTime(dateTime)
+        + getUsersPath()
+    }
 
-    %%UI --> |getEstatePrices| app(app)
-    %%UI --> |getEstatePrices| app(app)
-    %%UI --> |getEstatePrices| app(app)
-    %%UI --> |getEstatePrices| app(app)
-    %%UI --> |getEstatePrices| app(app)
-    
-    
-    
-    %%UI --> konec(Výběr kraje)
+    class uiFormatter{
+        + printStringArrayInBox(lines)
+        + printBorder(length)
+        + printLine(line, maxLength)
+        
+    }
 
-    
-    %% Výběr nových dat
+    class ui {
+        - UsersPath
+        - sc
+        + start()
+        + mainMenuUI()
+        + newDataUI()
+        + showDataUI()
+        + compareDataUI()
+        + typeChose()
+        + localityChose()
+    }
 
-    
+    class dataManager {
+        + saveFile(fileName, fileContent)
+        + appendFile(fileName, fileContent)
+        + readFileText(fileLocation)
+        + processFileData(filePath)
+    }
 
-    %% Go back
-    %%B --> A 
-    %%D --> A 
-    %%F --> D 
+
+    class Estate {
+        - name
+        - price
+        - area
+        - locality_region_id
+        - category_main_cb
+        - category_type_cb
+        - locality_district_id
+        + Estate()
+        + getName()
+        + getPrice()
+        + getArea()
+        + setPrice()
+        + getPricePerMeter()
+    }
+
+    ui -- app
+    ui -- uiFormatter
+    app -- dataManager
+    app -- Estate
+
 ```
+
+
